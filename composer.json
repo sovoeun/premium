@@ -1,0 +1,10 @@
+{
+
+  "autoload": {
+    "classmap": [
+      "app/Config",
+      "app/Server",
+      "app/Libraries"
+    ]
+  }
+}
