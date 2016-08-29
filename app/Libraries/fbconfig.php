@@ -27,6 +27,7 @@ try {
     // When validation fails or other local issues
 }
 
+
 if (isset($session)) {
 
     $fields = array('id', 'email','name', 'first_name', 'last_name', 'link', 'website','gender', 'locale', 'about', 'hometown', 'location');
@@ -44,9 +45,10 @@ if (isset($session)) {
     header("Location: ../../index.php");
 } else {
 
-    $loginUrl = $helper->getLoginUrl();
+    $loginUrl = $helper->getLoginUrl(array("scope"=>"email"));
     header("Location: " . $loginUrl);
 }
+
 
 
 ?>
